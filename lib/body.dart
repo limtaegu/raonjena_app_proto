@@ -13,9 +13,7 @@ class MyHomePage extends StatelessWidget {
       ),
       // AppBar
 
-      body: Padding(
-        padding:
-            EdgeInsets.fromLTRB(30.0, 40.0, 0.0, 0.0), // 왼쪽, 위, 오른쪽, 아래 간격을 뜻함
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
