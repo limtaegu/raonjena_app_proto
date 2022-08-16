@@ -8,7 +8,12 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 255, 194, 214),
       appBar: AppBar(
-        title: Text('라온제나 앱'),
+        title: Center(
+          child: Image.asset(
+            'assets/raonjenatitle.png',
+            height: 70,
+          ),
+        ),
         backgroundColor: Color.fromARGB(255, 255, 182, 206),
         elevation: 0.0,
       ),
@@ -19,16 +24,9 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start, // start 시작점 정렬
           children: <Widget>[
-            Center(
-              child: CircleAvatar(
-                backgroundImage:
-                    AssetImage('assets/raonjenatitle.png'), // 삽입 할 이미지 경로 입력
-                radius: 60, // 이미지의 크기
-              ),
-            ),
             Divider(
               // Divider는 선을 그려주는 위젯
-              height: 60, // 높이
+              height: 60, // 위와 아래 높이 위 30 아래 30 픽셀을 띄어 놓겠다는 뜻
               color: Colors.grey[850],
               thickness: 0.5, // 선의 두께를 지정해주는 속성
               endIndent: 5, // Divider 선이 끝에서부터 얼마나 떨어져 있어야 되는지 알려주는 속성,
@@ -111,6 +109,13 @@ class MyHomePage extends StatelessWidget {
                 ),
               ],
             ),
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/raonjenatitle.png'),
+                radius: 40,
+                backgroundColor: Colors.pink,
+              ),
+            )
           ],
         ),
       ),
