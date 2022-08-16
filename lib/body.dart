@@ -6,7 +6,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 255, 194, 214),
+      backgroundColor: Color.fromARGB(255, 251, 212, 225),
       appBar: AppBar(
         title: Center(
           child: Image.asset(
