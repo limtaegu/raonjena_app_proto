@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -10,11 +11,26 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Image.asset(
           'assets/raonjenatitle.png',
-          height: 70,
+          height: 60,
         ),
         backgroundColor: Color.fromARGB(255, 255, 182, 206),
-        elevation: 0.0,
+        elevation: 0.0, // 높이
         centerTitle: true,
+        //actions: 오른쪽 아이콘 넣기 leading: 왼쪽 아이콘 넣기
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: () {
+            debugPrint('menu button is clicked');
+          },
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(CupertinoIcons.camera),
+            onPressed: () {
+              debugPrint('camera button is clicked');
+            },
+          ),
+        ],
       ),
       // AppBar 영역
 

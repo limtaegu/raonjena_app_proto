@@ -1,4 +1,4 @@
-#Mon Aug 15 23:18:18 KST 2022
+#Tue Aug 16 22:50:57 KST 2022
 base.0=/Users/imtaegu/Desktop/github/raonjena_app_prototype/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
