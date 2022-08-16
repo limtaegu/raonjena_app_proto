@@ -8,16 +8,15 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 251, 212, 225),
       appBar: AppBar(
-        title: Center(
-          child: Image.asset(
-            'assets/raonjenatitle.png',
-            height: 70,
-          ),
+        title: Image.asset(
+          'assets/raonjenatitle.png',
+          height: 70,
         ),
         backgroundColor: Color.fromARGB(255, 255, 182, 206),
         elevation: 0.0,
+        centerTitle: true,
       ),
-      // AppBar
+      // AppBar 영역
 
       body: Padding(
         padding: const EdgeInsets.all(8.0),
