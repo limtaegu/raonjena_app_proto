@@ -17,12 +17,14 @@ class MyHomePage extends StatelessWidget {
         elevation: 0.0, // 높이
         centerTitle: true,
         //actions: 오른쪽 아이콘 넣기 leading: 왼쪽 아이콘 넣기
+        /*    
         leading: IconButton(
           icon: Icon(Icons.menu),
           onPressed: () {
             debugPrint('menu button is clicked');
           },
         ),
+        */
         actions: [
           IconButton(
             icon: Icon(CupertinoIcons.camera),
@@ -32,6 +34,35 @@ class MyHomePage extends StatelessWidget {
           ),
         ],
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+              // 유저 프로필 박스
+              currentAccountPicture: CircleAvatar(
+                // 프로필에 동그라미 박스를 그릴 때 사용
+                backgroundImage: AssetImage(
+                    'assets/raonjenaprofile.jpeg'), // 동그라미 박스에 Asset 이미지를 가져와서 넣음
+                backgroundColor: Colors.white, // 동그라미 박스의 배경색 설정
+              ),
+              accountName: Text('RAON'), // 프로필 이름
+              accountEmail: Text('aka1997@naver.com'), // 프로필 이메일
+              onDetailsPressed: () {
+                // 추가정보 펼치기 버튼
+                debugPrint('arrow is clicked');
+              },
+              decoration: BoxDecoration(
+                color: Colors.red[200],
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(40.0),
+                  bottomRight: Radius.circular(40.0),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ), // 왼쪽에 Drawer 생성
       // AppBar 영역
 
       body: Padding(
