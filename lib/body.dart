@@ -34,6 +34,8 @@ class MyHomePage extends StatelessWidget {
           ),
         ],
       ),
+      // AppBar 영역
+
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -46,6 +48,12 @@ class MyHomePage extends StatelessWidget {
                     'assets/raonjenaprofile.jpeg'), // 동그라미 박스에 Asset 이미지를 가져와서 넣음
                 backgroundColor: Colors.white, // 동그라미 박스의 배경색 설정
               ),
+              otherAccountsPictures: <Widget>[
+                CircleAvatar(
+                  backgroundColor: Colors.white,
+                  backgroundImage: AssetImage('assets/raonjenaReservation.png'),
+                )
+              ],
               accountName: Text('RAON'), // 프로필 이름
               accountEmail: Text('aka1997@naver.com'), // 프로필 이메일
               onDetailsPressed: () {
@@ -53,17 +61,57 @@ class MyHomePage extends StatelessWidget {
                 debugPrint('arrow is clicked');
               },
               decoration: BoxDecoration(
-                color: Colors.red[200],
+                // 프로필 박스의 색상, 크기, 곡률 등을 조정 하게 해줌
+                color: Colors.red[200], // 프로필 박스 색상 설정
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(40.0),
-                  bottomRight: Radius.circular(40.0),
+                  // 프로필 창의 곡률 조정
+                  bottomLeft: Radius.circular(40.0), //  왼쪽 아래 곡률 40도 조정
+                  bottomRight: Radius.circular(40.0), // 오른쪽 아래 곡률 40도 조정
                 ),
               ),
+            ),
+            ListTile(
+              // 프로필 아래 메뉴 칸
+              leading: Icon(
+                // 왼쪽에 아이콘 생성
+                Icons.home,
+                color: Colors.grey[850],
+              ),
+              title: Text('Home'),
+              onTap: () {
+                debugPrint('Home is Clicked');
+              },
+              trailing: Icon(Icons.add), // + 버튼 추가
+            ),
+            ListTile(
+              // 프로필 아래 메뉴 칸
+              leading: Icon(
+                // 왼쪽에 아이콘 생성
+                Icons.settings,
+                color: Colors.grey[850],
+              ),
+              title: Text('Setting'),
+              onTap: () {
+                debugPrint('Setting is Clicked');
+              },
+              trailing: Icon(Icons.add), // + 버튼 추가
+            ),
+            ListTile(
+              // 프로필 아래 메뉴 칸
+              leading: Icon(
+                // 왼쪽에 아이콘 생성
+                Icons.question_answer,
+                color: Colors.grey[850],
+              ),
+              title: Text('Q&A'),
+              onTap: () {
+                debugPrint('Q&A is Clicked');
+              },
+              trailing: Icon(Icons.add), // + 버튼 추가
             ),
           ],
         ),
       ), // 왼쪽에 Drawer 생성
-      // AppBar 영역
 
       body: Padding(
         padding: const EdgeInsets.all(8.0),
